@@ -30,16 +30,20 @@ function findLargestNumber(arr) {
         }
     }
 
-    return largestNumber;  // Return the smallest number
+    return largestNumber;  // Return the largest number
 }
 
+function findAverage(arr) {
+    let sum = 0;
 
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i]; // Loop through the array and sum up all the numbers
+    }
 
-
-
-
-
-
+    // Calculate the average by dividing the sum by the length of the array
+    let average = sum / arr.length;
+    return average;  // Return the average
+}
 
 function render() {
 
@@ -48,6 +52,9 @@ function render() {
 
     let largestNumber = findLargestNumber(myNumbers);
     largestNumberElement.innerText = largestNumber;
+
+    let averageNumber = findAverage(myNumbers);
+    averageNumberElement.innerText = averageNumber;
 
 }
 
