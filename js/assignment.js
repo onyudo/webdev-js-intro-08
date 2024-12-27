@@ -20,6 +20,19 @@ function findSmallestNumber(arr) {
     return smallestNumber;  // Return the smallest number
 }
 
+function findLargestNumber(arr) {
+    let largestNumber = arr[0];  // Initialize largestNumber to the first element
+
+    // Loop through the array starting from the second element
+    for (let i = 1; i < arr.length; i++) { // Start from the second element (i = 1) and compare each element to largestNumber.
+        if (arr[i] > largestNumber) {  // If the current element (arr[i]) is larger than largestNumber, update largestNumber.
+            largestNumber = arr[i];     // Update largest number if a smaller one is found
+        }
+    }
+
+    return largestNumber;  // Return the smallest number
+}
+
 
 
 
@@ -32,6 +45,9 @@ function render() {
 
     let smallestNumber = findSmallestNumber(myNumbers);
     smallestNumberElement.innerText = smallestNumber; 
+
+    let largestNumber = findLargestNumber(myNumbers);
+    largestNumberElement.innerText = largestNumber;
 
 }
 
